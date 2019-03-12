@@ -1,0 +1,90 @@
+html {
+  box-sizing: border-box;
+  background: #ffc680;
+  font-family: cursive;
+  font-size: 26px;
+}
+
+*,
+*:before. *:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background: #630f9c;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel1 {
+  background-image: url(https://daily.jstor.org/wp-content/uploads/2018/05/outer_space_treaty_1050x700.jpg);
+}
+.panel2 {
+  background-image: url(https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/whatisspacet.jpg);
+}
+.panel3 {
+  background-image: url(https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2018/space.jpg);
+}
+.panel4 {
+  background-image: url(https://entropymag.org/wp-content/uploads/2014/10/outer-space-wallpaper-pictures.jpg);
+}
+.panel5 {
+  background-image: url(https://wi-images.condecdn.net/image/B1NZW376pxM/crop/1620/f/space_11.jpg);
+}
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel p {
+  text-transform: uppercase;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
+
+.cta {
+  color: white;
+  text-decoration: none;
+}
